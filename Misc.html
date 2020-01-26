@@ -1,0 +1,109 @@
+﻿<head>
+  <title>Miscellaneous</title>
+  <link rel=stylesheet type="text/css" href="index.css">
+  <script src="Dice.js"></script>
+  <script> window.onload = initDice </script>
+</head>
+
+<body>
+
+  <div id="topbar">
+
+    <a href="index.html">
+      <div class="menuelement">
+        <h1>Home</h1>
+      </div>
+    </a>
+
+    <a href="People.html">
+      <div class="menuelement">
+        <h1>People</h1>
+      </div>
+    </a>
+
+    <a href="Clues.html">
+      <div class="menuelement">
+        <h1>Clues</h1>
+      </div>
+    </a>
+
+    <a href="Places.html">
+      <div class="menuelement">
+        <h1>Locations</h1>
+      </div>
+    </a>
+
+    <a href="Timeline.html">
+      <div class="menuelement">
+        <h1>Timeline</h1>
+      </div>
+    </a>
+
+    <a href="Misc.html">
+      <div class="menuelement selected">
+        <h1>Miscellaneous</h1>
+      </div>
+    </a>
+
+    <a href="Gallery.html">
+      <div class="menuelement">
+        <h1>Gallery</h1>
+      </div>
+    </a>
+  </div>
+
+  <div id="mainbody">
+    <div id="musicgallery">
+
+          <!-- Favanistan Music -->
+
+          <div class="Soundtrack">
+            <h1 class="musicheading">
+              Combat music
+            </h1>
+            <div>
+              <iframe src="https://open.spotify.com/embed/playlist/2lSgEEyjsikXaJBkXwNqoz" width="300" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+
+          <!-- The Academy -->
+
+          <div class="Soundtrack">
+            <h1 class="musicheading">
+              The Academy Ambient
+            </h1>
+            <div>
+              <iframe src="https://open.spotify.com/embed/playlist/1lo3DDRN2SXe6sIXewgXVZ" width="300" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+
+          <!-- Wilderness soundtrack -->
+
+          <div class="Soundtrack">
+            <h1 class="musicheading">
+              Wilderness soundtrack
+            </h1>
+            <div>
+                <iframe src="https://open.spotify.com/embed/playlist/3ww3mpLVg3qAzGiCvfaLII" width="300" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+          </div>
+        
+    </div>
+      <!-- "musicgallery" closing tag -->
+
+    <div id="diceroller">
+      <h2>Dice</h2>
+      <input type="number" id="diceamount" value="1" min="0" max="999">
+      <select id="diceselect">       <!--Kun estetisk så langt-->
+        <option value="4">d4</option>
+        <option value="6">d6</option>
+        <option value="8">d8</option>
+        <option value="10">d10</option>
+        <option value="12">d12</option>
+        <option value="20" selected="true">d20</option>
+        <option value="%">%</option>
+      </select>
+      <button id="dice" onclick="d(20);">Roll 1d20</button>
+      <span id="output"></span>
+    </div>
+  </div>
