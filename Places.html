@@ -2,6 +2,7 @@
     <title>Locations</title>
     <link rel=stylesheet type="text/css" href="index.css">
     <script src="Places.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:200&display=swap" rel="stylesheet">
 </Head>
 <body> 
     
@@ -53,11 +54,68 @@
      
 <div id="mainbody">
     
-    <!-- Valisia Map -->
-<div class="mapcontainer" id="blackmap">
-    <img class="map" src="img/Maps/Map%20overly%20realistic.jpg">
+    
+    
+     <div style= "display: flex">
+        
+    <input 
+           onclick="document.getElementById ('blackmap').style.display='block';
+                    document.getElementById ('academymap').style.display='none';
+                    document.getElementById ('extendedmap').style.display='none'"
+           
+           type="button" id="valisia" tabindex="1" class="mapbutton" value="The Blacklands">
+        
+    <input onclick="document.getElementById ('blackmap').style.display='none';
+                    document.getElementById ('academymap').style.display='block';
+                    document.getElementById ('extendedmap').style.display='none'"
+           type="button"  id="favanistan"  tabindex="2" class="mapbutton" value="The Academy">
+        
+    <input onclick="document.getElementById ('blackmap').style.display='none';
+                    document.getElementById ('academymap').style.display='none';
+                    document.getElementById ('extendedmap').style.display='block'"
+           type="button"  id="exit"  tabindex="3" class="mapbutton" value="World map">
+        
+    </div>
+   
+    
+    <!-- Blacklands Map -->
+<div class="mapcontainer" id="blackmap" >
+    <img class="map" src="img/Maps/Map%20overly%20realistic.jpg" usemap="#blackmap">
 </div>
-
+    
+    <!-- Academy Map -->
+<div class="mapcontainer" id="academymap" style="display: none">
+    <img class="map" src="img/Maps/academymap.png" usemap="#academymap">
+    
+</div>
+    
+    <!-- World Map -->
+<div class="mapcontainer" id="extendedmap" style="display: none">
+    <img class="map" src="img/Maps/TheMap.png" usemap="#worldmap">
+        
+</div>
+    
+    
+<map name="blackmap">
+  <area shape="circle" coords="550,500,200" alt="Blackfort" href="blackstone_castle.html">
+    
+  <area shape="circle" coords="887,1017,200" alt="Blacktown" href="blacktown.html">
+    
+  <area shape="circle" coords="142,1244,200" alt="Folkvangr" href="Folkvangr.html">
+    
+  <area shape="circle" coords="1110,1450,200" alt="Academy" href="The_academy.html">
+    
+  <area shape="circle" coords="845,1855,200" alt="Janestead" href="Janestead.html">
+    
+  <area shape="circle" coords="1700,1072,200" alt="Rovenhaust" href="Rovenjaust.html">
+</map>
+    
+    
+    
+    
+</div>
+    
+    
 
 
             

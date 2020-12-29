@@ -18,7 +18,8 @@ p {
 }
 
 a {
-  color: #fff
+  color: #fff;
+    text-decoration: none;
 }
 
 /*page layout*/
@@ -36,7 +37,12 @@ a {
   padding-bottom: 10px;
     overflow-x: auto;
 }
-
+.texts {
+    margin-left: 10px;
+}
+.maintitle {
+    margin-top: 10px;
+}
 /*top menu layout*/
 #topbar {
     z-index: 100;
@@ -46,6 +52,7 @@ a {
     background-blend-mode: overlay;
     color: white;
     display: flex;
+    text-decoration: none;
     flex-direction: row;
     justify-content: center;
     background-position: center;
@@ -54,6 +61,7 @@ a {
   text-align: center;
     align-self: center;
     top: 0px;
+    left: 0px;
 }
 
 .menuelement {
@@ -64,7 +72,7 @@ a {
   margin: 10px;
   display: block;
     text-align: center;
-  font-family: cambria;
+  font-family: 'roboto slab', serif;
   border-width: 1px;
   border-color: white;
   border-style: solid;
@@ -131,8 +139,9 @@ a {
   outline-style: solid;
   outline-width: 1px;
   box-shadow: 0px 0px 30px #000;
-  transition: 0.5s;
-    text-align: left
+  transition: 1s;
+    cursor: pointer;
+    text-align: left;
 }
 
 /* Deprecated, keep in case js breaks
@@ -146,6 +155,7 @@ a {
   text-overflow: ellipsis;
   margin: 3px;
   text-align: left;
+transition: 1s;
 }
 
 .textbox {
@@ -161,7 +171,7 @@ a {
 }
 
 .textbox:hover {
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .personparagraph {
@@ -187,7 +197,7 @@ a {
 }
 
 .scrollhoverbox:hover {
-  overflow: auto;
+  overflow: hidden;
 }
 
 .personimage {
@@ -238,7 +248,15 @@ a {
 #baron .personimage {
   background-image: url(img/People/baron.png)
 }
-
+#greyrobe .personimage {
+  background-image: url(img/People/Greyrobe.png)
+}
+#rovenhaust .personimage {
+  background-image: url(img/People/Rovenhaust.png)
+}
+#priscilla .personimage {
+  background-image: url(img/People/priscilla.png)
+}
 
 
 
@@ -292,7 +310,21 @@ align-self: center;
 #tipcontainer{
     width:80%; height: 100px; margin: auto; margin-top: 20px; display: flex;}
 
-.tipbutton{display: inline-block; width: 100px; height: 100px; outline-color: #fff; outline-style: solid; outline-width: 1px; justify-content: center; display: flex; align-items: center; font-size:40px; background-color:rgba(0,0,0,0.4);margin: 20px;}
+.tipbutton{
+    display: inline-block; 
+    width: 100px; 
+    height: 100px; 
+    outline-color: #fff; 
+    outline-style: solid; 
+    outline-width: 1px; 
+    justify-content: center; 
+    display: flex; 
+    align-items: center; 
+    font-size:40px; 
+    background-color:rgba(0,0,0,0.4);
+    margin: 20px; 
+    cursor: pointer;
+}
 .tipbutton:hover{
     box-shadow: 0px 0px 10px #fff
 }
@@ -316,7 +348,7 @@ align-self: center;
     width: 340px;
 }
 #rightbutton{}
-#clues{margin-top: 20px;}
+.clues{margin-top: 20px;}
 .cluetitle {
   z-index: 5;
   position: sticky;
@@ -350,12 +382,24 @@ align-self: center;
   opacity: 1
 }
 
-
+/* map */
 .mapcontainer {
     overflow: scroll;
     height: 820px;
 }
+.coordinate {position: fixed;}
+#cursorY {left:100px;}
+.mapheader {
+    cursor: pointer;
+}
 
+.mapbutton {
+    color: #FFF;
+    background-color: #000;
+    font-family: cambria;
+    margin: 10px;
+    
+}
 /* music layour */
 .musicheading {
   font-family: cambria;
@@ -400,7 +444,7 @@ align-self: center;
   position: relative;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #fff;
+  border-top-color: #777;
   width: 1560px;
     
 }
@@ -414,17 +458,23 @@ align-self: center;
 }
 
 .timelinfobox {
-  z-index: 117;
+  z-index: 1;
+    background-color: rgba(0,0,0,0.0);
+    background-image: linear-gradient(rgba(0,0,0,0.5)rgba(0,0,0,0.0));
 }
 
 .timelineheading {
-  z-index: 2;
+  z-index: 8;
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0,0,0,0.8);
   padding: 5px;
   top: -5px;
-  border-radius: 3px;
 }
+.timelineheading:hover {
+    background-color: rgba(0,0,0,0);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
+}
+
 
 .timelineheading .timelineinfobox {
   font-size: 14px;
@@ -432,8 +482,7 @@ align-self: center;
   height: 0px;
   opacity: 0;
   top: 10px;
-  width: 200px;
-  transition: 0.4s;
+    width: 50px;
 }
 
 .timelineheading:hover .timelineinfobox {
@@ -442,6 +491,9 @@ align-self: center;
   margin-top: 10px;
   opacity: 1;
   visibility: visible;
+  width: 200px;
+    overflow: hidden;
+    
 }
 
 .timestamp {
@@ -453,7 +505,7 @@ align-self: center;
   left: 50%;
   border-left-width: 1px;
   border-left-style: solid;
-  border-left-color: rgba(255,255,255,0.5);
+  border-left-color: #777;
 }
 
 .smallupper {
@@ -463,7 +515,6 @@ align-self: center;
 
 .upper {
   height: 128;
-  ;
   top: -128;
 }
 
@@ -491,16 +542,16 @@ align-self: center;
 }
 
 .waylower {
-  height: 150px;
+  height: 200px;
 }
 
 .waylower .timelineheading {
   position: relative;
-  top: 122px;
+  top: 172px;
 }
 
 .marker {
-  outline-color: #fff;
+  outline-color: #aaa;
   outline-style: solid;
   outline-width: 1px;
   margin-left: -3px;
@@ -527,7 +578,13 @@ align-self: center;
   left: 900px;
 }
 #war {
-    left:890
+    left: 890px;
+}
+#scrap {
+    left: 1300px;
+}
+#swamp {
+    left: 1200px;
 }
 
 
@@ -590,6 +647,3 @@ align-self: center;
   left: 1440px;
 }
 
-.timelineinfobox {
-  z-index: 4 !important;
-}
