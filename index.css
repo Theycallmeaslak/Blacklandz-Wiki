@@ -660,7 +660,13 @@ transition: 1s;
 #anabelle .personimage {
     background-image: url(img/People/Anabelle.png);
 }
-#Eliza .personimage {
+#eliza .personimage {
     background-image: url(img/People/Eliza.png);
+}
+#ekkr .personimage {
+  background-image: url(img/People/cloud.png)
+}
+#danar .personimage {
+  background-image: url(img/People/Danar.png)
 }
 
