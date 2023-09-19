@@ -504,4 +504,162 @@ align-self: center;
 #thirteenth {
   left: 1440px;
 }
+/*person page layout*/
+#peopleflexpc {
+  padding: 10px;
+    text-align: center;
+    background-color: rgba(50,50,50,0.5);
+    box-shadow: 0px 0px 20px #333;
+}
+
+#peopleflexNpc {
+  padding: 10px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px #000;
+}
+#peopleflexdead{
+  padding: 10px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.25);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.5);
+}
+
+.personbox {
+  --expanded: 0;
+  /*Brukes for å holde styr på om boksen er utvidet eller ikke*/
+  width: 44%;
+  height: 162px;
+  margin: 20px;
+  padding: 10px;
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline-color: #aaa;
+  outline-style: solid;
+  outline-width: 1px;
+  box-shadow: 0px 0px 30px #000;
+  transition: 1s;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Deprecated, keep in case js breaks
+.personbox:target {
+    height: auto;
+    opacity: 1;
+}
+*/1
+.scrollhoverbox {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 3px;
+  text-align: left;
+transition: 1s;
+}
+
+.textbox {
+  flex: 1;
+  margin: 11px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-left-style: solid;
+  border-width: 7px;
+  border-color: #555;
+  padding: 8px;
+}
+
+.textbox:hover {
+  overflow-y: hidden;
+}
+
+.personparagraph {
+  display: inline-block;
+  margin: 5px;
+}
+
+.footnote {
+  font-style: italic;
+  display: inline-block;
+  font-size: 10px;
+  margin: 5px;
+  color: #ccc
+}
+
+.personname {
+  text-decoration: none;
+  text-align: center;
+  font-size: 19px;
+  margin: 8px;
+  padding: 4px;
+  position: sticky;
+}
+
+.scrollhoverbox:hover {
+  overflow: hidden;
+}
+
+.personimage {
+    
+  background-color: #222;
+  background-image: url(img/People/Unknown.png);
+  display: block;
+  margin: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  width: 150px;
+  height: 150px;
+}
+
+.personimage:hover {
+  border-radius: 0%;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+/*person ID tags*/
+#cloud .personimage {
+  background-image: url(img/People/cloud.png)
+}
+#adrie .personimage {
+  background-image: url(img/People/Bard.png)
+}
+#jhon .personimage {
+  background-image: url(img/People/Jhon.png)
+}
+#oleg .personimage {
+  background-image: url(img/People/Oleg.png)
+}
+#lazarix .personimage {
+  background-image: url(img/People/Lazarix.png)
+}
+#janixe .personimage {
+  background-image: url(img/People/Janixe.png)
+}
+#sirras .personimage {
+  background-image: url(img/People/Siras.png)
+}
+#librarian .personimage {
+  background-image: url(img/People/Librarian.png)
+}
+#baron .personimage {
+  background-image: url(img/People/baron.png)
+}
+#greyrobe .personimage {
+  background-image: url(img/People/Greyrobe.png)
+}
+#rovenhaust .personimage {
+  background-image: url(img/People/Rovenhaust.png)
+}
+#priscilla .personimage {
+  background-image: url(img/People/priscilla.png)
+}
+#anabelle .personimage {
+    background-image: url(img/People/Anabelle.png);
+}
+#Eliza .personimage {
+    background-image: url(img/People/Eliza.png);
+}
 
