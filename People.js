@@ -1,2 +1,2 @@
-var el = document.getElementByid("grendur");
+var el = document.getElementById("grendur");
 el.scrollIntoView();

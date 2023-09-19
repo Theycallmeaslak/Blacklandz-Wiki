@@ -7,6 +7,20 @@ body {
   background-position: center;
     font-family: "cambria"
 }
+.personimage {
+    
+  background-color: #222;
+  background-image: url(img/People/Unknown.png);
+  display: block;
+  margin: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  width: 150px;
+  height: 150px;
+}
 
 h1 {
   font-size: 19px;
@@ -599,20 +613,7 @@ transition: 1s;
   overflow: hidden;
 }
 
-.personimage {
-    
-  background-color: #222;
-  background-image: url(img/People/Unknown.png);
-  display: block;
-  margin: 6px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #fff;
-  border-radius: 50%;
-  transition: 0.5s;
-  width: 150px;
-  height: 150px;
-}
+
 
 .personimage:hover {
   border-radius: 0%;
